@@ -1,0 +1,40 @@
+{
+  "productName": "tauri-tray",
+  "version": "0.0.0",
+  "identifier": "com.tauri.dev",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "trayIcon": {
+      "iconAsTemplate": true,
+      "iconPath": "icons/icon.ico",
+      "menuOnLeftClick": true,
+      "id": "main-tray"
+    },
+    "windows": [
+      {
+        "title": "tauri-tray",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
